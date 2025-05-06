@@ -1,15 +1,27 @@
 [project]
 name = "pork"
 version = "0.1.0"
-description = "Add your description here"
+description = "Pack of random korrelations"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "numpy>=2.2.5",
     "scipy>=1.15.2",
+    "seaborn>=0.13.2",
 ]
 
 [dependency-groups]
 dev = [
+    "jupyterlab>=4.4.1",
+    "pytest>=8.3.5",
+    "pytest-cov>=6.1.1",
     "ruff>=0.11.8",
 ]
+docs = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.12",
+]
+
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
