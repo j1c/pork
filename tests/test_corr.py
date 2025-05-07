@@ -1,7 +1,7 @@
 import pytest
 
-from pork.corr import vine_method, random_factors_method
-from pork.utils import is_pos_semidefinite, is_symmetric, is_square
+from pork.corr import random_factors_method, vine_method
+from pork.utils import is_pos_semidefinite, is_square, is_symmetric
 
 
 @pytest.fixture
@@ -33,9 +33,7 @@ def test_corr_matrices_shape(corr_matrices):
 def test_corr_matrices_positive_definite(corr_matrices):
     for method, matrix in corr_matrices:
         # Check if the matrix is positive semi-definite
-        assert is_pos_semidefinite(matrix), (
-            f"{method} matrix is not positive semi-definite"
-        )
+        assert is_pos_semidefinite(matrix), f"{method} matrix is not positive semi-definite"
 
 
 def test_corr_matrices_symmetric(corr_matrices):

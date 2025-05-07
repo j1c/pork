@@ -78,10 +78,7 @@ def vine_method(d: int, beta: float) -> np.ndarray:
             p = partial[i, j]
 
             for k in range(i - 1, -1, -1):
-                p = (
-                    p * np.sqrt((1 - partial[k, i] ** 2) * (1 - partial[k, j] ** 2))
-                    + partial[k, i] * partial[k, j]
-                )
+                p = p * np.sqrt((1 - partial[k, i] ** 2) * (1 - partial[k, j] ** 2)) + partial[k, i] * partial[k, j]
 
             corr[i, j] = p
             corr[j, i] = p
