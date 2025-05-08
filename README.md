@@ -1,11 +1,11 @@
 # Pack of random korrelations (pork)
-<center>
+<p align="center">
 <img src="logo.png" width="400">
 
 [![PyPI version](https://img.shields.io/pypi/v/pork.svg)](https://pypi.org/project/pork/)
 [![Downloads shield](https://pepy.tech/badge/pork)](https://pepy.tech/project/pork)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-</center>
+</p>
 
 Sample your own correlation matrices.
 
